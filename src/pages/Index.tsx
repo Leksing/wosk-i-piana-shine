@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -155,59 +156,38 @@ const Index = () => {
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* WiP Logo with detailing icons */}
-            <div className="flex items-center space-x-3">
-              <div className="flex flex-col items-center">
-                <div className="text-3xl font-bold text-[#C7672D] tracking-[1px] mb-1">WiP</div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-6 h-6 text-[#C7672D]">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                      <path d="M2 17l10 5 10-5"/>
-                      <path d="M2 12l10 5 10-5"/>
-                    </svg>
-                  </div>
-                  <div className="w-6 h-6 text-[#C7672D]">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="3"/>
-                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                    </svg>
-                  </div>
+            {/* Simple WiP Logo */}
+            <div className="flex items-center space-x-8">
+              <div className="text-3xl font-bold text-[#C7672D] tracking-[1px]">WiP</div>
+              <div className="hidden md:flex items-center space-x-8">
+                <button 
+                  onClick={() => scrollToSection('uslugi')}
+                  className="text-[#6C6C6C] hover:text-[#C7672D] transition-colors font-bold"
+                >
+                  Usługi
+                </button>
+                <button 
+                  onClick={() => scrollToSection('galeria')}
+                  className="text-[#6C6C6C] hover:text-[#C7672D] transition-colors font-bold"
+                >
+                  Galeria
+                </button>
+                <button 
+                  onClick={() => scrollToSection('o-nas')}
+                  className="text-[#6C6C6C] hover:text-[#C7672D] transition-colors font-bold"
+                >
+                  O nas
+                </button>
+                <button 
+                  onClick={() => scrollToSection('kontakt')}
+                  className="text-[#6C6C6C] hover:text-[#C7672D] transition-colors font-bold"
+                >
+                  Kontakt
+                </button>
+                <div className="flex items-center space-x-2 text-[#6C6C6C]">
+                  <Phone className="h-4 w-4" />
+                  <span className="text-sm font-bold">58 683 47 22</span>
                 </div>
-              </div>
-              <div>
-                <span className="text-2xl font-bold text-[#2C2C2C] tracking-[2px]">WOSK I PIANA</span>
-                <p className="text-sm text-[#6C6C6C]">Myjnia samochodowa | Korekty | Powłoki</p>
-              </div>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <button 
-                onClick={() => scrollToSection('uslugi')}
-                className="text-[#6C6C6C] hover:text-[#C7672D] transition-colors font-bold"
-              >
-                Usługi
-              </button>
-              <button 
-                onClick={() => scrollToSection('galeria')}
-                className="text-[#6C6C6C] hover:text-[#C7672D] transition-colors font-bold"
-              >
-                Galeria
-              </button>
-              <button 
-                onClick={() => scrollToSection('o-nas')}
-                className="text-[#6C6C6C] hover:text-[#C7672D] transition-colors font-bold"
-              >
-                O nas
-              </button>
-              <button 
-                onClick={() => scrollToSection('kontakt')}
-                className="text-[#6C6C6C] hover:text-[#C7672D] transition-colors font-bold"
-              >
-                Kontakt
-              </button>
-              <div className="flex items-center space-x-2 text-[#6C6C6C]">
-                <Phone className="h-4 w-4" />
-                <span className="text-sm font-bold">58 683 47 22</span>
               </div>
             </div>
             <Button 
@@ -224,14 +204,59 @@ const Index = () => {
       <section className="relative py-16 bg-[#2C2C2C]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
+            {/* Full Brand Logo */}
+            <div className="mb-8">
+              <div className="flex items-center justify-center mb-6">
+                {/* Detailing Icons */}
+                <div className="flex items-center space-x-8 mb-4">
+                  {/* Polisher Icon */}
+                  <div className="text-[#C7672D]">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 2L6 4v2l2-2h8l2 2V4l-2-2H8zm-2 4v2l2 2h8l2-2V6H6zm0 4v8c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-8H6zm2 2h8v6H8v-6z"/>
+                      <circle cx="12" cy="16" r="2"/>
+                      <path d="M10 14h4v1h-4z"/>
+                    </svg>
+                  </div>
+                  {/* Spray Bottle Icon */}
+                  <div className="text-[#C7672D]">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M9 2v2h2V2h2v2h1c1.1 0 2 .9 2 2v3c0 1.1-.9 2-2 2h-1v9c0 1.1-.9 2-2 2H9c-1.1 0-2-.9-2-2v-9H6c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h1V2h2zm0 9v9h6v-9H9z"/>
+                      <circle cx="12" cy="15" r="1"/>
+                      <circle cx="10" cy="17" r="0.5"/>
+                      <circle cx="14" cy="17" r="0.5"/>
+                      <circle cx="12" cy="19" r="0.5"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              
+              {/* WOSK I PIANA Logo */}
+              <div className="text-center mb-4">
+                <h1 className="text-6xl md:text-7xl font-bold text-[#C7672D] mb-2 tracking-[3px]" style={{
+                  background: 'linear-gradient(135deg, #C7672D 0%, #D4885C 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  borderRadius: '20px',
+                  padding: '10px 20px',
+                  border: '3px solid #C7672D'
+                }}>
+                  WOSK I PIANA
+                </h1>
+                <p className="text-xl text-white font-normal tracking-[1px]">
+                  Myjnia samochodowa | Korekty | Powłoki
+                </p>
+              </div>
+            </div>
+
             <Badge className="mb-6 bg-[#C7672D]/20 text-[#C7672D] border-[#C7672D]/30 px-4 py-2 text-sm font-bold">
               Profesjonalna myjnia w Pruszczu Gdańskim
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-[1.2]">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-[1.2]">
               ZABEZPIECZ SWOJE AUTO
               <br />
               <span className="text-[#C7672D]">PRZED JESIENIĄ I ZIMĄ</span>
-            </h1>
+            </h2>
             <p className="text-lg text-[#F8F9FA] mb-8 leading-[1.6] max-w-2xl">
               Specjalizujemy się w detailingu samochodowym najwyższej jakości. 
               Mycie, korekty lakieru i powłoki ochronne wykonywane przez doświadczonych profesjonalistów.
