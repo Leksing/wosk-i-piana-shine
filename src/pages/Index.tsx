@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -157,8 +158,13 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
-              {/* Simple WiP Logo */}
-              <div className="text-3xl font-bold text-[#C7672D] tracking-[1px]">WiP</div>
+              {/* Logo in top-left */}
+              <img 
+                src="https://imgur.com/xqgYbq8.png" 
+                alt="WiP Logo" 
+                className="h-10 cursor-pointer"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              />
               <div className="hidden md:flex items-center space-x-8">
                 <button 
                   onClick={() => scrollToSection('uslugi')}
@@ -197,13 +203,6 @@ const Index = () => {
               >
                 Umów wizytę
               </Button>
-              {/* Header Logo */}
-              <img 
-                src="https://imgur.com/rCWUTpz.png" 
-                alt="WiP Logo" 
-                className="h-10 cursor-pointer"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              />
             </div>
           </div>
         </div>
@@ -216,7 +215,7 @@ const Index = () => {
             {/* Homepage Hero Logo */}
             <div className="mb-8">
               <img 
-                src="https://imgur.com/P8TK1ev.png" 
+                src="https://imgur.com/yE25oSN.png" 
                 alt="Wosk i Piana Logo" 
                 className="mx-auto max-h-32 md:max-h-40"
               />
@@ -521,3 +520,4 @@ const Index = () => {
 };
 
 export default Index;
+
