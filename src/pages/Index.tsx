@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -189,12 +190,21 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <Button 
-              onClick={() => scrollToSection('kontakt')}
-              className="bg-[#C7672D] hover:bg-[#A85524] text-white font-bold px-6 py-3 rounded-lg"
-            >
-              Umów wizytę
-            </Button>
+            <div className="flex items-center space-x-4">
+              <Button 
+                onClick={() => scrollToSection('kontakt')}
+                className="bg-[#C7672D] hover:bg-[#A85524] text-white font-bold px-6 py-3 rounded-lg"
+              >
+                Umów wizytę
+              </Button>
+              {/* Header Logo */}
+              <img 
+                src="https://imgur.com/rCWUTpz.png" 
+                alt="WiP Logo" 
+                className="h-10 cursor-pointer"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              />
+            </div>
           </div>
         </div>
       </nav>
@@ -202,15 +212,14 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative py-16 bg-[#2C2C2C]">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            {/* Full Brand Logo */}
-            <div className="text-center mb-12">
-              <h1 className="text-6xl md:text-7xl font-bold text-[#C7672D] mb-4 tracking-[3px]">
-                WOSK I PIANA
-              </h1>
-              <p className="text-xl text-white font-normal tracking-[1px] mb-8">
-                Myjnia samochodowa | Korekty | Powłoki
-              </p>
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Homepage Hero Logo */}
+            <div className="mb-8">
+              <img 
+                src="https://imgur.com/P8TK1ev.png" 
+                alt="Wosk i Piana Logo" 
+                className="mx-auto max-h-32 md:max-h-40"
+              />
             </div>
 
             <Badge className="mb-6 bg-[#C7672D]/20 text-[#C7672D] border-[#C7672D]/30 px-4 py-2 text-sm font-bold">
@@ -221,11 +230,11 @@ const Index = () => {
               <br />
               <span className="text-[#C7672D]">TWOJEGO AUTA</span>
             </h2>
-            <p className="text-lg text-[#F8F9FA] mb-8 leading-[1.6] max-w-2xl">
+            <p className="text-lg text-[#F8F9FA] mb-8 leading-[1.6] max-w-2xl mx-auto">
               Specjalizujemy się w detailingu samochodowym najwyższej jakości. 
               Mycie, korekty lakieru i powłoki ochronne wykonywane przez doświadczonych profesjonalistów.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={() => scrollToSection('uslugi')}
                 className="bg-[#C7672D] hover:bg-[#A85524] text-white font-bold px-6 py-3 rounded-lg text-base"
